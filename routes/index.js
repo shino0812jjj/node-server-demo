@@ -38,7 +38,7 @@ router.post('/sample', (req, res) => {
   });
 });
 
-router.get('/face', (req, res) => {
+router.get('/chars', (req, res) => {
   const name = req.query.name;
 
   if (!name) {
@@ -60,9 +60,9 @@ router.get('/face', (req, res) => {
   const count = Math.floor(Math.random() * 1000);
 
   res.json({
-    characters: characters,
-    name: name,
-    count: count,
+    characters,
+    name,
+    count,
   });
 });
 
